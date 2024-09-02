@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dlrbn6vej34mb"]
+
+[ext_resource type="PackedScene" uid="uid://dunkfywtclk8f" path="res://scenes/player.tscn" id="1_al1hc"]
+
+[sub_resource type="TileSet" id="TileSet_iros1"]
+
+[node name="world" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_iros1")
+format = 2
+
+[node name="Player" parent="." instance=ExtResource("1_al1hc")]
+SPEED = null
+ACCELERATION = null
+FRICTION = null

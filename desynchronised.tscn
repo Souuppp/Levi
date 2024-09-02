@@ -1,0 +1,37 @@
+[gd_scene load_steps=2 format=3 uid="uid://75xvepstxge2"]
+
+[ext_resource type="Script" path="res://desynchronised.gd" id="1_0y4xq"]
+
+[node name="Desynchronised" type="Node2D"]
+position = Vector2(20, 16)
+script = ExtResource("1_0y4xq")
+
+[node name="Button" type="Button" parent="."]
+modulate = Color(0.359334, 1, 0.953412, 1)
+offset_left = 272.0
+offset_top = 272.0
+offset_right = 915.0
+offset_bottom = 382.0
+theme_override_font_sizes/font_size = 50
+text = "Reset memory of ancestor"
+
+[node name="Button2" type="Button" parent="."]
+modulate = Color(1, 0, 0, 1)
+offset_left = 308.0
+offset_top = 474.0
+offset_right = 858.0
+offset_bottom = 582.0
+theme_override_font_sizes/font_size = 50
+text = "Exit Virtual experience"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 1.0
+offset_top = 74.0
+offset_right = 1144.0
+offset_bottom = 215.0
+theme_override_font_sizes/font_size = 50
+text = "DESYNCHRONISED 
+ancestor was not seen by Guards"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

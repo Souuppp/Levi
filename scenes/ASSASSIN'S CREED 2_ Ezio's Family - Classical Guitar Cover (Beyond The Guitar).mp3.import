@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dld6n7ninpwlo"
+path="res://.godot/imported/ASSASSIN'S CREED 2_ Ezio's Family - Classical Guitar Cover (Beyond The Guitar).mp3-370d8ed1cac8a2d9f1e438d2a2f13155.mp3str"
+
+[deps]
+
+source_file="res://scenes/ASSASSIN'S CREED 2_ Ezio's Family - Classical Guitar Cover (Beyond The Guitar).mp3"
+dest_files=["res://.godot/imported/ASSASSIN'S CREED 2_ Ezio's Family - Classical Guitar Cover (Beyond The Guitar).mp3-370d8ed1cac8a2d9f1e438d2a2f13155.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

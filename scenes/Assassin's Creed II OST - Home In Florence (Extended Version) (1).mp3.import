@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cuvxrqgoebhin"
+path="res://.godot/imported/Assassin's Creed II OST - Home In Florence (Extended Version) (1).mp3-c09cbaed5b21f94c4e1b135e6f08c347.mp3str"
+
+[deps]
+
+source_file="res://scenes/Assassin's Creed II OST - Home In Florence (Extended Version) (1).mp3"
+dest_files=["res://.godot/imported/Assassin's Creed II OST - Home In Florence (Extended Version) (1).mp3-c09cbaed5b21f94c4e1b135e6f08c347.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
