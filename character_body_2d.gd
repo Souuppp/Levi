@@ -18,32 +18,8 @@ var follow
 func update_animation(direction):
 	if direction.x > 0:
 		animator.flip_h = false
-	
-	if direction.x < 0:
-		animator.flip_h = true
-	match anim_state:
-		state.idle:
-			animation_player.play("idle")
-		state.right:
-			animation_player.play("right")
-		state.down:
-			animation_player.play("down")
-		state.up:
-			animation_player.play("up")
-		state.death:
-			animation_player.play("death")
 
-
-
-func _on_area_2d_body_entered(body: Node2D) -> void:
-	if body.is_in_group("Player"):
-		animation_player.play("Detected")
-		get_tree().change_scene_to_file("res://desynchronised.tscn")
-
-
-
-
-func _on_area_2d_2_body_entered(body: Node2D) -> void:
+func _on_killzone_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		if Input.is_action_pressed("assassinate"):
 			get_tree().queue_free()

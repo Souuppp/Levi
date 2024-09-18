@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bmbgjulu52xcw"
+path="res://.godot/imported/Assassin's Creed hidden blade sound.mp3-15fb638b1b5daa2d254c11b85e166ed6.mp3str"
+
+[deps]
+
+source_file="res://Assassin's Creed hidden blade sound.mp3"
+dest_files=["res://.godot/imported/Assassin's Creed hidden blade sound.mp3-15fb638b1b5daa2d254c11b85e166ed6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

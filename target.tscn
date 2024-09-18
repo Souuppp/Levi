@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://ccy0pyatefejy"]
+
+[ext_resource type="Script" path="res://character_body_2d.gd" id="1_lpjsq"]
+[ext_resource type="Texture2D" uid="uid://ba367w7rwt7r8" path="res://New Piskel-1.png (5).png" id="2_v6ixe"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hka51"]
+radius = 40.0
+height = 80.0
+
+[node name="Target" type="CharacterBody2D"]
+script = ExtResource("1_lpjsq")
+
+[node name="NewPiskel-1_png(5)" type="Sprite2D" parent="."]
+position = Vector2(1, -5.25)
+scale = Vector2(0.75, 0.757813)
+texture = ExtResource("2_v6ixe")
+
+[node name="killzone" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="killzone"]
+position = Vector2(0, -1)
+shape = SubResource("CapsuleShape2D_hka51")
+
+[connection signal="body_entered" from="killzone" to="." method="_on_killzone_body_entered"]

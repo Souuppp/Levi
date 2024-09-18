@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://dunkfywtclk8f"]
+[gd_scene load_steps=36 format=3 uid="uid://dunkfywtclk8f"]
 
 [ext_resource type="Texture2D" uid="uid://cne2jcbnysixu" path="res://scenes/thumbnail_New Piskel (1)-1.png.png" id="2_ir0vi"]
 [ext_resource type="Texture2D" uid="uid://bv1j5dqba5geo" path="res://scenes/thumbnail_New Piskel (1).png" id="3_y02a8"]
@@ -58,6 +58,9 @@ func update_animation(direction):
 			animation_player.play(\"assassinate\")
 		state.idle:
 			animation_player.play(\"hurt\")
+
+
+
 
 func _physics_process(delta):
 
@@ -497,12 +500,10 @@ _data = {
 "up": SubResource("Animation_8yabl")
 }
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hk4ob"]
-height = 44.0
-
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
 visibility_layer = 35
-collision_layer = 32
+collision_layer = 33
+collision_mask = 33
 script = SubResource("GDScript_y6aur")
 
 [node name="ui and camera" type="Camera2D" parent="."]
@@ -517,7 +518,7 @@ sprite_frames = SubResource("SpriteFrames_jbkqo")
 animation = &"Hurt"
 autoplay = "idle"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["Player"]]
 position = Vector2(-0.0145283, 0.253963)
 shape = SubResource("CapsuleShape2D_jdtlf")
 one_way_collision_margin = 0.0
@@ -528,16 +529,3 @@ libraries = {
 "": SubResource("AnimationLibrary_bnxv3")
 }
 autoplay = "idle"
-
-[node name="hurtbox" type="Area2D" parent="." groups=["Player"]]
-position = Vector2(-1, 0)
-collision_layer = 32768
-collision_mask = 32768
-
-[node name="hurt" type="CollisionShape2D" parent="hurtbox"]
-position = Vector2(7, -16)
-shape = SubResource("CapsuleShape2D_hk4ob")
-one_way_collision_margin = 0.0
-debug_color = Color(0.824787, 0.0793921, 9.62615e-08, 0.42)
-
-[connection signal="area_entered" from="hurtbox" to="." method="_on_hurtbox_area_entered"]
