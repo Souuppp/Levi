@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://e1d46dqd6oo2"]
+[gd_scene load_steps=26 format=3 uid="uid://e1d46dqd6oo2"]
 
 [ext_resource type="Texture2D" uid="uid://dbclus4i8nug8" path="res://assets/Pixel Art Top Down - Basic/Texture/TX Tileset Wall.png" id="1_jhp1q"]
 [ext_resource type="Script" path="res://scenes/world_2.gd" id="1_u6r7l"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://dcncgg1yptpm0" path="res://assets/Pixel Art Top Down - Basic/Texture/TX Tileset Stone Ground.png" id="9_4ev5t"]
 [ext_resource type="PackedScene" uid="uid://dunkfywtclk8f" path="res://scenes/player.tscn" id="10_7ehr7"]
 [ext_resource type="PackedScene" uid="uid://bolqn12d3qb3d" path="res://Enemy.tscn" id="11_oiqhh"]
+[ext_resource type="AudioStream" uid="uid://ctrnquf7swjld" path="res://scenes/Echoes of the Castle.mp3" id="13_nyw7b"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ebir2"]
 
@@ -2240,5 +2241,9 @@ position = Vector2(32, -833)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="enter Door"]
 position = Vector2(0, -4)
 shape = SubResource("RectangleShape2D_fvx5p")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("13_nyw7b")
+autoplay = true
 
 [connection signal="body_entered" from="enter Door" to="." method="_on_enter_door_body_entered"]

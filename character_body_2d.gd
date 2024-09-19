@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-
+@export var change = false
 @export var SPEED = 50
 @export var ACCELERATION = 20.0
 @export var FRICTION = 10.0
@@ -19,7 +19,18 @@ func update_animation(direction):
 	if direction.x > 0:
 		animator.flip_h = false
 
+func _physics_process(delta: float) -> void:
+	if change == true:
+			if Input.is_action_pressed("assassinate"): 
+				queue_free()
+			else:
+				pass
+
+
+
+
 func _on_killzone_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
-		if Input.is_action_pressed("assassinate"):
-			get_tree().queue_free()
+		change = true
+	else:
+		change = false
