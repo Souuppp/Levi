@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bewovm1aild7u" path="res://scenes/thumbnail_New Piskel (1)-1.png (2).png" id="2_0hhbk"]
 [ext_resource type="Texture2D" uid="uid://ck5c0ujw2kimn" path="res://assets/thumbnail_New Piskel (1)-1.png (4).png" id="2_kc18v"]
 [ext_resource type="Texture2D" uid="uid://ch620laarjo2w" path="res://assets/thumbnail_New Piskel (1)-1.png (3).png" id="3_vewcu"]
-[ext_resource type="Texture2D" uid="uid://6c0mek3re25x" path="res://ares.png" id="5_8twwe"]
+[ext_resource type="Texture2D" uid="uid://ctfu3tht71gxs" path="res://scenes/Untitled.png" id="5_d4c8l"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3un0o"]
 atlas = ExtResource("2_kc18v")
@@ -299,23 +299,13 @@ libraries = {
 modulate = Color(0.976471, 1, 1, 0.521569)
 self_modulate = Color(1, 1, 1, 0.392157)
 visibility_layer = 524296
-position = Vector2(3, 2)
-polygon = PackedVector2Array(-6, 2, -21, 3, -76, 88, -76, 87, -10, 127, 60, 90, 60, 89, 4, 2)
+position = Vector2(2, 9)
+polygon = PackedVector2Array(-6, 2, -21, 3, -130, 33, -76, 87, -12, 110, 60, 90, 105, 38, 4, 2)
 
-[node name="Ares" type="Sprite2D" parent="Area2D/CollisionPolygon2D"]
-position = Vector2(-4.50002, 23.5)
-scale = Vector2(0.200521, 0.223148)
-texture = ExtResource("5_8twwe")
-
-[node name="Ares2" type="Sprite2D" parent="Area2D/CollisionPolygon2D"]
-position = Vector2(-44, 56)
-scale = Vector2(0.109375, 0.0925926)
-texture = ExtResource("5_8twwe")
-
-[node name="Ares3" type="Sprite2D" parent="Area2D/CollisionPolygon2D"]
-position = Vector2(30.8516, 57.5)
-scale = Vector2(0.0949463, 0.0916667)
-texture = ExtResource("5_8twwe")
+[node name="Untitled" type="Sprite2D" parent="Area2D"]
+position = Vector2(-6.75, 16.5)
+scale = Vector2(0.214323, 0.208333)
+texture = ExtResource("5_d4c8l")
 
 [node name="Area2D2" type="Area2D" parent="."]
 
