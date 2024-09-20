@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=3 uid="uid://i0n7ms8321lc"]
+
+[ext_resource type="Script" path="res://button.gd" id="1_01ert"]
+[ext_resource type="PackedScene" uid="uid://bolqn12d3qb3d" path="res://Enemy.tscn" id="2_s7m6t"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(58, 39)
+zoom = Vector2(2, 2)
+
+[node name="Label" type="Label" parent="Camera2D"]
+offset_left = -280.0
+offset_top = -156.0
+offset_right = 204.0
+offset_bottom = -3.0
+text = "This is an enemy, if you go into the red zone he will see you. 
+if you are seen you will be desynchronised from the 
+ancestors memory our goal is to keep you synchronised, 
+what you need to do to stay synchronised is go into the church 
+to kill the Priest, he us feeding false information to better the 
+Templar Order. more on that later"
+
+[node name="Button" type="Button" parent="Camera2D/Label"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 173.0
+offset_right = 229.0
+offset_bottom = 231.0
+text = "Start Mission"
+script = ExtResource("1_01ert")
+
+[node name="Enemy" parent="." instance=ExtResource("2_s7m6t")]
+position = Vector2(146, 65)
+
+[connection signal="pressed" from="Camera2D/Label/Button" to="Camera2D/Label/Button" method="_on_pressed"]
