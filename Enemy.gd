@@ -37,7 +37,6 @@ func _physics_process(delta: float) -> void:
 	if change == true:
 			if Input.is_action_pressed("assassinate"): 
 				queue_free()
-				
 			else:
 				pass
 #kills enemy

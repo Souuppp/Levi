@@ -21,9 +21,8 @@ var anim_state = state.idle
 
 func update_state():
 
-		
-	if anim_state == state.assassinate:
-		return
+	if Input.is_action_pressed(\"assassinate\"):
+		anim_state = state.assassinate
 	if anim_state == state.Hurt:
 		return
 	if velocity == Vector2.ZERO:
@@ -39,8 +38,6 @@ func update_state():
 func update_animation(direction):
 	if direction.x > 0:
 		animator.flip_h = false
-		
-		
 	elif direction.x < 0:
 		animator.flip_h = true
 	match anim_state:
@@ -54,11 +51,8 @@ func update_animation(direction):
 			animation_player.play(\"up\")
 		state.death:
 			animation_player.play(\"death\")
-		state.assassinate:
-			animation_player.play(\"assassinate\")
 		state.idle:
 			animation_player.play(\"hurt\")
-
 
 
 
@@ -73,6 +67,10 @@ func _physics_process(delta):
 	update_animation(direction)
 	
 	move_and_slide()
+
+
+func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	pass # Replace with function body.
 "
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ph0j7"]
@@ -515,7 +513,7 @@ position_smoothing_speed = 8.0
 position = Vector2(3.98548, -14.746)
 scale = Vector2(0.705313, 0.777045)
 sprite_frames = SubResource("SpriteFrames_jbkqo")
-animation = &"Hurt"
+animation = &"assassinate"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["Player"]]
